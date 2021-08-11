@@ -1,4 +1,7 @@
+/* eslint-disable no-useless-escape */
 const { celebrate, Joi } = require('celebrate');
+
+const URL_PATTERN = /^(http|https):\/\/(www\.)?[a-z\d\.\-_~:/?#\[\]@!$&'()\*\+,;=]+/;
 
 module.exports.updateUserValidation = celebrate({
   body: Joi.object().keys({
@@ -20,11 +23,11 @@ module.exports.createMovieValidation = celebrate({
     duration: Joi.number().required(),
     year: Joi.string().required(),
     description: Joi.string().required(),
-    image: Joi.string().required(),
-    trailer: Joi.string().required(),
+    image: Joi.string().pattern(URL_PATTERN).required(),
+    trailer: Joi.string().pattern(URL_PATTERN).required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
-    thumbnail: Joi.string().required(),
+    thumbnail: Joi.string().pattern(URL_PATTERN).required(),
     movieId: Joi.number().required(),
   }),
 });

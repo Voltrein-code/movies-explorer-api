@@ -1,0 +1,16 @@
+module.exports.errorMessages = {
+  createMovieValidationError: 'Переданы некорректные данные при создании фильма',
+  movieNotFoundError: 'Фильм с указанным id не найден',
+  deleteMovieForbiddenError: 'Вы не можете удалить чужой фильм',
+  deleteMovieCastError: 'Переданы некорректные данные для удаления фильма',
+  userNotFoundError: 'Пользователь по указанному _id не найден',
+  userCastError: 'Переданы некоректные данные при поиске',
+  userUpdateValidationError: 'Переданы некорректные данные при обновлении пользователя',
+  userCreateValidationError: 'Переданы не корректные данные при создании пользователя',
+  userCreateMongoError: 'Пользователь с таким email уже зарегистрирован',
+  authError: 'Необходима авторизация',
+  serverError: 'На сервере произошла ошибка',
+  linkError: 'Некоректная ссылка',
+  userLoginError: 'Неправильные почта или пароль',
+  universalNotFoundError: 'Запрашиваемый ресурс не найден',
+};
